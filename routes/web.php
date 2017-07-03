@@ -14,4 +14,9 @@
 //     return view('welcome');
 // });
 
+Route::get('/', function() {
+    return view('login');
+});
+
+
 Route::get('/home', 'home@index');
