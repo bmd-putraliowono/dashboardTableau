@@ -10,13 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', function(){
-//     return view('welcome');
-// });
 
-Route::get('/', function() {
-    return view('login');
+Auth::routes();
+
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('log-in');
+
+Route::get('/home', 'home@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function() {
+    //
 });
 
-
-Route::get('/home', 'home@index');
+Route::group(['prefix' => 'user'], function() {
+    //
+});
