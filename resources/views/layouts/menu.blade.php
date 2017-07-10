@@ -37,12 +37,12 @@
               <!-- User Account -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span>User name</span>
+                  <span>Welcome, {{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu" id="dropdown">
                   {{-- <li class="dropdown-content"> --}}
                     {{-- <div class="dropdown-content"> --}}
-                      <a href="#">Log Out</a>
+                      <a href="{{ url('/logout') }}">Log Out</a>
                     {{-- </div> --}}
                   {{-- </li> --}}
                 </div>
