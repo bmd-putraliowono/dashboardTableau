@@ -13,16 +13,22 @@
 
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('log-in');
 
+
 Route::group(['middleware' => 'web'], function () {
     Auth::routes();
-    Route::get('/logout', 'Auth\LoginController@logout')->name('log-out');
-    // Route::get('/home', 'home@index')->name('home');
-
-    Route::group(['prefix' => 'admin', 'middleware'=>['auth']], function() {
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('/logout', 'Auth\LoginController@logout')->name('log-out');
         Route::get('/home', 'home@index')->name('home');
     });
+    
+    // Route::get('/logout', 'Auth\LoginController@logout')->name('log-out');
+    // Route::get('/home', 'home@index')->name('home');
 
-    Route::group(['prefix' => 'user', 'middleware'=>['auth']], function() {
-        //
-    });
+    // Route::group(['prefix' => 'admin'], function() {
+    //     Route::get('/home', 'home@index')->name('home');
+    // });
+
+    // Route::group(['prefix' => 'user'], function() {
+    //     //
+    // });
 });

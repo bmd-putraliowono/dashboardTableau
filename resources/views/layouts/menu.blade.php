@@ -112,7 +112,11 @@
                 <li><a href="#"><i class="fa fa-table"></i> Report 3</a></li>
               </ul>
             </li>
-            <li class="header">ADMIN MENU</li>
+            @if(Auth::user()->isAdmin)
+              @include('adminMenu');
+            @endif
+            {{-- Admin Menu --}}
+            {{-- <li class="header">ADMIN MENU</li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
@@ -148,7 +152,7 @@
                 <li><a href="#"><i class="fa fa-circle-o"></i> View Menu</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> Configuration</a></li>
               </ul>
-            </li>            
+            </li>             --}}
           </ul>
         </section>
         <!-- /.sidebar -->
