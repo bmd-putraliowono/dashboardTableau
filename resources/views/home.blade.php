@@ -1,4 +1,4 @@
-@extends('layout.menu')
+@extends('layouts.menu')
 @section('title')
     <title>Bhinneka Tab | Home</title>
 @endsection
@@ -66,13 +66,13 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{asset('js/tableau/ga.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/tableau/salesforce.js')}}"></script>
-    <script>
+    {{-- <script type="text/javascript" src="{{asset('js/tableau/ga.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/tableau/salesforce.js')}}"></script> --}}
+    {{-- <script>
         window.onload = function(){
             initGaOt();
             initGaCa();
             initEsSg();
         };
-    </script>
+    </script> --}}
 @endsection

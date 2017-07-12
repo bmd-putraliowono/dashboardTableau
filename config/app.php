@@ -180,6 +180,9 @@ return [
         //laravelcollective
         Collective\Html\HtmlServiceProvider::class,
 
+        //zizaco/entrust
+       	Zizaco\Entrust\EntrustServiceProvider::class,
+
     ],
 
     /*
@@ -233,6 +236,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
+        //zizaco/entrust
+        'Entrust' => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

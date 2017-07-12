@@ -36,7 +36,7 @@
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             @if ($errors->has('email'))
               <span class="help-block">
-                <strong>Check your Email</strong>
+                <strong>Wrong Email or Password</strong>
               </span>
             @endif
           </div>
@@ -45,16 +45,16 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             @if ($errors->has('password'))
               <span class="help-block">
-                <strong>Check your Password</strong>
+                <strong>Wrong Email or Password</strong>
               </span>
             @endif
           </div>
           <div class="row">
             <div class="col-xs-8">
               <div class="checkbox icheck">
-                <label>
+                {{-- <label>
                   {!! Form::checkbox('remember') !!} Remember Me
-                </label>
+                </label> --}}
               </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
